@@ -6,23 +6,27 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.PagerAdapter;
 
+import java.util.ArrayList;
+
 /**
- * Created by usuario on 13/12/17.
+ * ViewPagerAdapterrrrrrr, para mostrar paginas flamas
  */
 
 class ViewPagerAdapter extends FragmentPagerAdapter {
 
     private int pageCount;
+    private ArrayList<String> titulos;
 
     public ViewPagerAdapter(FragmentManager fragmentManager)
     {
         super(fragmentManager);
     }
 
-    public ViewPagerAdapter(FragmentManager fragmentManager, int pageCount)
+    public ViewPagerAdapter(FragmentManager fragmentManager, int pageCount, ArrayList<String> titulos)
     {
         super(fragmentManager);
         this.pageCount = pageCount;
+        this.titulos = titulos;
     }
 
     @Override
@@ -60,6 +64,12 @@ class ViewPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 5;
+        return pageCount;
+    }
+
+    @Override
+    public CharSequence getPageTitle(int position) {
+
+        return titulos.get(position);
     }
 }

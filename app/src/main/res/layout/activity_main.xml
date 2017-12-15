@@ -15,14 +15,20 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:layout_scrollFlags="scroll|enterAlways"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+        <!-- Si el theme de Toolbar es Dark, el popupTheme debe ser Light, para que los botones
+        del menú aparezcan en color claro, blanco preferiblemente -->
 
         <android.support.design.widget.TabLayout
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_scrollFlags="scroll|enterAlways"
-            app:tabMode="scrollable">
+            app:tabMode="scrollable"
+            app:tabTextColor="@android:color/white"
+            app:tabSelectedTextColor="@color/colorAccent">
 
             <android.support.design.widget.TabItem
                 android:layout_width="wrap_content"

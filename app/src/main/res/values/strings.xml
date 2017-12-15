@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">TabLayout</string>
+
+    <string name="txtV_MsgHint">Contiene el texto de Fragment</string>
+
+    <string-array name="tabs">
+        <item>Tab 1</item>
+        <item>Tab 2</item>
+        <item>Tab 3</item>
+        <item>Tab 3</item>
+        <item>Tab 5</item>
+    </string-array>
+
+    <string-array name="iconos">
+        <item>@drawable/blogger</item>
+        <item>@drawable/fb</item>
+        <item>@drawable/linkedin</item>
+        <item>@drawable/snapchat</item>
+        <item>@drawable/snapchat</item>
+    </string-array>
 </resources>
